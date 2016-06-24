@@ -1,0 +1,106 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'capture' mode, which is best suited to
+# comparing a test and live version of the same website.
+#
+# `wraith capture capture.yaml`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The directory that your screenshots will be stored in
+directory: 'reports/cgudev_cgunews'
+
+
+# (required) The domains to take screenshots of.
+domains:
+  kentico:  "http://syd-lb.cgu.com.au.wwwserver.com.au"
+  drupaldev:      "http://dev.cgu.iagdev.net"
+
+# (required) The paths to capture. All paths should exist for both of the domains specified above.
+paths:
+  "CGU_News_News_Stories_IAG_s_acquisition_of_Wesfarmers_Insurance_underwri": "/About-CGU/CGU-News/News-Stories/IAG-s-acquisition-of-Wesfarmers-Insurance-underwri"
+  "cgu_news": "/About-CGU/cgu-news"
+  "cgu_news_Media_Releases": "/About-CGU/cgu-news/Media-Releases"
+  "cgu_news_Media_Releases_2015_Australian_Insurance_Industry_Awards_Large_Ge": "/About-CGU/cgu-news/Media-Releases/2015-Australian-Insurance-Industry-Awards-Large-Ge"
+  "cgu_news_Media_Releases_2015_Insurance_Business_magazine_s_Insurer_of_the": "/About-CGU/cgu-news/Media-Releases/2015-Insurance-Business-magazine%E2%80%99s-Insurer-of-the"
+  "cgu_news_Media_Releases_2015_NIBA_General_Insurer_of_the_Year_Award": "/About-CGU/cgu-news/Media-Releases/2015-NIBA-General-Insurer-of-the-Year-Award"
+  "cgu_news_Media_Releases_CGU_addresses_strata_insurance_affordability_in_No": "/About-CGU/cgu-news/Media-Releases/CGU-addresses-strata-insurance-affordability-in-No"
+  "cgu_news_Media_Releases_CGU_partners_with_Equality_event_Move_in_May": "/About-CGU/cgu-news/Media-Releases/CGU-partners-with-Equality-event-Move-in-May"
+  "cgu_news_Media_Releases_Farmers_to_get_free_access_to_medical_care": "/About-CGU/cgu-news/Media-Releases/Farmers-to-get-free-access-to-medical-care"
+  "cgu_news_Media_Releases_cgu_makes_progress_in_supporting_queenslanders": "/About-CGU/cgu-news/Media-Releases/cgu-makes-progress-in-supporting-queenslanders"
+  "cgu_news_Media_Releases_cgu_ready_to_support_customers_ahead_of_cyclone_it": "/About-CGU/cgu-news/Media-Releases/cgu-ready-to-support-customers-ahead-of-cyclone-it"
+  "cgu_news_Media_Releases_cgu_voted_2015_insurer_of_the_year_by_insurance_br": "/About-CGU/cgu-news/Media-Releases/cgu-voted-2015-insurer-of-the-year-by-insurance-br"
+  "cgu_news_Media_Releases_insurers_help_queensland_prepare_for_natural_disas": "/About-CGU/cgu-news/Media-Releases/insurers-help-queensland-prepare-for-natural-disas"
+  "cgu_news_Media_Releases_q_as_for_iag_s_acquisition_of_wesfarmers_insurance": "/About-CGU/cgu-news/Media-Releases/q-as-for-iag%E2%80%99s-acquisition-of-wesfarmers-insurance"
+  "cgu_news_news_stories": "/About-CGU/cgu-news/news-stories"
+  "cgu_news_news_stories_CGU_co_sponsors_an_online_community_just_for_Tradi": "/About-CGU/cgu-news/news-stories/CGU-co-sponsors-an-online-community-just-for-Tradi"
+  "cgu_news_news_stories_CGU_helps_Tropfest_make_a_comeback": "/About-CGU/cgu-news/news-stories/CGU-helps-Tropfest-make-a-comeback"
+  "cgu_news_news_stories_CGU_ready_to_assist_customers_impacted_by_bushfire": "/About-CGU/cgu-news/news-stories/CGU-ready-to-assist-customers-impacted-by-bushfire"
+  "cgu_news_news_stories_CGU_recognised_with_two_awards_at_the_2015_Victori": "/About-CGU/cgu-news/news-stories/CGU-recognised-with-two-awards-at-the-2015-Victori"
+  "cgu_news_news_stories_CGU_voted_2015_General_Insurer_of_the_Year__by_NI": "/About-CGU/cgu-news/news-stories/CGU-voted-%E2%80%982015-General-Insurer-of-the-Year%E2%80%99-by-NI"
+  "cgu_news_news_stories_CGU_voted_2015_Insurer_of_the_Year_by_insurance_br": "/About-CGU/cgu-news/news-stories/CGU-voted-2015-Insurer-of-the-Year-by-insurance-br"
+  "cgu_news_news_stories_CGU_wins_Large_General_Insurance_Company_of_the_Ye": "/About-CGU/cgu-news/news-stories/CGU-wins-Large-General-Insurance-Company-of-the-Ye"
+  "cgu_news_news_stories_Darren_s_Story": "/About-CGU/cgu-news/news-stories/Darren-s-Story"
+  "cgu_news_news_stories_Don_t_risk_safety_for_an_EOFY_fleet_bargain": "/About-CGU/cgu-news/news-stories/Don-t-risk-safety-for-an-EOFY-fleet-bargain"
+  "cgu_news_news_stories_We_are_ready_to_help_customers_affected_by_bushfir": "/About-CGU/cgu-news/news-stories/We-are-ready-to-help-customers-affected-by-bushfir"
+  "cgu_news_news_stories_We_are_ready_to_help_customers_affected_by_storms": "/About-CGU/cgu-news/news-stories/We-are-ready-to-help-customers-affected-by-storms"
+  "cgu_news_news_stories_accc_approves_iag_s_acquisition_of_wesfarmers__aus": "/About-CGU/cgu-news/news-stories/accc-approves-iag%E2%80%99s-acquisition-of-wesfarmers%E2%80%99-aus"
+  "cgu_news_news_stories_cgu_addresses_strata_insurance_affordability_in_no": "/About-CGU/cgu-news/news-stories/cgu-addresses-strata-insurance-affordability-in-no"
+  "cgu_news_news_stories_cgu_announced_as_finalist_for_australian_insurance": "/About-CGU/cgu-news/news-stories/cgu-announced-as-finalist-for-australian-insurance"
+  "cgu_news_news_stories_cgu_dropbox_partnership": "/About-CGU/cgu-news/news-stories/cgu-dropbox-partnership"
+  "cgu_news_news_stories_cgu_makes_claiming_even_easier": "/About-CGU/cgu-news/news-stories/cgu-makes-claiming-even-easier"
+  "cgu_news_news_stories_cgu_nominated_for_niba_general_insurer_of_the_year": "/About-CGU/cgu-news/news-stories/cgu-nominated-for-niba-general-insurer-of-the-year"
+  "cgu_news_news_stories_cgu_on_the_ground_in_queensland": "/About-CGU/cgu-news/news-stories/cgu-on-the-ground-in-queensland"
+  "cgu_news_news_stories_cgu_rated_best_insurance_underwriter_by_brokers": "/About-CGU/cgu-news/news-stories/cgu-rated-best-insurance-underwriter-by-brokers"
+  "cgu_news_news_stories_cgu_ready_to_help_customers_in_se_queensland": "/About-CGU/cgu-news/news-stories/cgu-ready-to-help-customers-in-se-queensland"
+  "cgu_news_news_stories_cgu_recognised_for_outstanding_customer_experience": "/About-CGU/cgu-news/news-stories/cgu-recognised-for-outstanding-customer-experience"
+  "cgu_news_news_stories_cgu_secure_three_year_partnership_with_nsw_waratah": "/About-CGU/cgu-news/news-stories/cgu-secure-three-year-partnership-with-nsw-waratah"
+  "cgu_news_news_stories_cgu_well_represented_at_niba_convention": "/About-CGU/cgu-news/news-stories/cgu-well-represented-at-niba-convention"
+  "cgu_news_news_stories_cgu_wins_canstar_outstanding_value_home_insurance": "/About-CGU/cgu-news/news-stories/cgu-wins-canstar-outstanding-value-home-insurance"
+  "cgu_news_news_stories_iag_completes_acquisition_of_wesfarmers_insurance": "/About-CGU/cgu-news/news-stories/iag-completes-acquisition-of-wesfarmers-insurance"
+  "cgu_news_news_stories_iag_s_acquisition_of_wesfarmers_insurance_underwri": "/About-CGU/cgu-news/news-stories/iag-s-acquisition-of-wesfarmers-insurance-underwri"
+  "cgu_news_news_stories_preparing_for_extreme_weather": "/About-CGU/cgu-news/news-stories/preparing-for-extreme-weather"
+  "cgu_news_news_stories_regional_small_business_at_risk": "/About-CGU/cgu-news/news-stories/regional-small-business-at-risk"
+  "cgu_news_news_stories_secure_your_pet_on_the_road": "/About-CGU/cgu-news/news-stories/secure-your-pet-on-the-road"
+  "cgu_news_news_stories_we_are_ready_to_help_customers_affected_by_cyclone": "/About-CGU/cgu-news/news-stories/we-are-ready-to-help-customers-affected-by-cyclone"
+  "cgu_news_news_stories_workcover_nsw_announces_results_of_tender_process": "/About-CGU/cgu-news/news-stories/workcover-nsw-announces-results-of-tender-process"
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+  - 320x1500
+#  - 600x768
+#  - 768
+#  - 1024
+  - 1280x2000
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+# before_capture: 'javascript/disable_javascript--phantom.js'
+# before_capture: 'javascript/cgu-cleanup.js'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  template: 'basic_template' # Examples: 'basic_template' (default), 'slideshow_template'
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first

@@ -1,0 +1,79 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'capture' mode, which is best suited to
+# comparing a test and live version of the same website.
+#
+# `wraith capture capture.yaml`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The directory that your screenshots will be stored in
+directory: 'reports/cgudev_desktop_menu'
+
+
+# (required) The domains to take screenshots of.
+domains:
+  kentico:  "http://syd-lb.cgu.com.au.wwwserver.com.au"
+  drupaldev:      "http://dev.cgu.iagdev.net"
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+before_capture: 'javascript/cgu-activate-desktop-menu.js'
+
+# (required) The paths to capture. All paths should exist for both of the domains specified above.
+paths:
+  "personal_0": "/personal#wraithmenu=0"
+  "personal_1": "/personal#wraithmenu=1"
+  "personal_2": "/personal#wraithmenu=2"
+  "personal_3": "/personal#wraithmenu=3"
+  "personal_4": "/personal#wraithmenu=4"
+  "business_0": "/business#wraithmenu=0"
+  "business_1": "/business#wraithmenu=1"
+  "business_2": "/business#wraithmenu=2"
+  "business_3": "/business#wraithmenu=3"
+  "business_4": "/business#wraithmenu=4"
+  "about_0": "/about-cgu#wraithmenu=0"
+  "about_1": "/about-cgu#wraithmenu=1"
+  "about_2": "/about-cgu#wraithmenu=2"
+  "about_3": "/about-cgu#wraithmenu=3"
+  "about_4": "/about-cgu#wraithmenu=4"
+  "blog_0": "/blog#wraithmenu=0"
+  "blog_1": "/blog#wraithmenu=1"
+  "advisers_0": "/for-advisers#wraithmenu=0"
+  "advisers_1": "/for-advisers#wraithmenu=1"
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+#  - 320x1500
+#  - 600x768
+#  - 768
+#  - 1024
+  - 1280x2000
+
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  template: 'basic_template' # Examples: 'basic_template' (default), 'slideshow_template'
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first

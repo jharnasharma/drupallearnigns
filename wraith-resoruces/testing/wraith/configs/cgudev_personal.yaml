@@ -1,0 +1,106 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'capture' mode, which is best suited to
+# comparing a test and live version of the same website.
+#
+# `wraith capture capture.yaml`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The directory that your screenshots will be stored in
+directory: 'reports/cgudev_personal'
+
+
+# (required) The domains to take screenshots of.
+domains:
+  kentico:  "http://syd-lb.cgu.com.au.wwwserver.com.au"
+  drupaldev:      "http://iagcgudev3.prod.acquia-sites.com"
+
+# (required) The paths to capture. All paths should exist for both of the domains specified above.
+paths:
+  "Personal" : "/Personal"
+  "Learn-About-Insurance" : "/Personal/Learn-About-Insurance"
+  "when-you-should-think-about-insurance" : "/Personal/Learn-About-Insurance/when-you-should-think-about-insurance"
+  "having-enough-insurance" : "/Personal/Learn-About-Insurance/having-enough-insurance"
+  "how-claims-work" : "/Personal/Learn-About-Insurance/how-claims-work"
+  "how-premiums-are-calculated" : "/Personal/Learn-About-Insurance/how-premiums-are-calculated"
+  "the-risk-of-underinsurance" : "/Personal/Learn-About-Insurance/the-risk-of-underinsurance"
+  "Preparing-for-natural-disasters" : "/Personal/Learn-About-Insurance/Preparing-for-natural-disasters"
+  "Packing-an-emergency-kit" : "/Personal/Learn-About-Insurance/Preparing-for-natural-disasters/Packing-an-emergency-kit"
+  "Preparing-for-bushfires" : "/Personal/Learn-About-Insurance/Preparing-for-natural-disasters/Preparing-for-bushfires"
+  "Preparing-for-cyclones" : "/Personal/Learn-About-Insurance/Preparing-for-natural-disasters/Preparing-for-cyclones"
+  "Preparing-for-floods" : "/Personal/Learn-About-Insurance/Preparing-for-natural-disasters/Preparing-for-floods"
+  "why-use-an-insurance-adviser" : "/Personal/Learn-About-Insurance/why-use-an-insurance-adviser"
+  "calculators" : "/Personal/Learn-About-Insurance/calculators"
+  "products" : "/Personal/products"
+  "car-insurance" : "/personal/products/car-insurance"
+  "comprehensive-car-insurance" : "/personal/products/car-insurance/comprehensive-car-insurance"
+  "third-party-fire-and-theft-insurance" : "/personal/products/car-insurance/third-party-fire-and-theft-insurance"
+  "third-party-property-damage-insurance" : "/personal/products/car-insurance/third-party-property-damage-insurance"
+  "manage-policy" : "/Personal/products/manage-policy"
+  "faqs" : "/Personal/products/manage-policy/faqs"
+  "Home-Insurance" : "/Personal/products/Home-Insurance"
+  "Accidental-Damage-Home-Insurance" : "/Personal/products/Home-Insurance/Accidental-Damage-Home-Insurance"
+  "Listed-Events-Home-Insurance" : "/Personal/products/Home-Insurance/Listed-Events-Home-Insurance"
+  "Fundamentals-Home-Insurance" : "/Personal/products/Home-Insurance/Fundamentals-Home-Insurance"
+  "home-contents-transit-insurance" : "/Personal/products/Home-Insurance/home-contents-transit-insurance"
+  "Compare-Home-Insurance" : "/Personal/products/Home-Insurance/Compare-Home-Insurance"
+  "life-insurance" : "/Personal/products/life-insurance"
+  "Landlords-Insurance" : "/Personal/products/Landlords-Insurance"
+  "Residential-Strata-Insurance" : "/Personal/products/Residential-Strata-Insurance"
+  "boat-insurance" : "/Personal/products/boat-insurance"
+  "Travel-Insurance" : "/Personal/products/Travel-Insurance"
+  "caravan-insurance" : "/Personal/products/caravan-insurance"
+  "Find-an-insurance-adviser" : "/Personal/Find-an-insurance-adviser"
+  "Insurance-Claims" : "/Personal/Insurance-Claims"
+  "claims-app" : "/Personal/Insurance-Claims/claims-app"
+  "Claims-forms" : "/Personal/insurance-claims/Claims-forms"
+  "Home-warranty-claims" : "/Personal/Insurance-Claims/Home-warranty-claims"
+  "claims-faq" : "/Personal/Insurance-Claims/claims-faq"
+  "making-a-claim" : "/Personal/Insurance-Claims/making-a-claim"
+  "CGU-managed-repairers" : "/Personal/insurance-claims/CGU-managed-repairers"
+  "travel-insurance-claims" : "/Personal/Insurance-Claims/travel-insurance-claims"
+  "life-insurance-claims" : "/Personal/Insurance-Claims/life-insurance-claims"
+  "consumer-credit-claims" : "/Personal/Insurance-Claims/consumer-credit-claims"
+  "workers-compensation-claims" : "/Personal/Insurance-Claims/workers-compensation-claims"
+  "contact" : "/Personal/contact"
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+#  - 320x1500
+#  - 600x768
+#  - 768
+#  - 1024
+  - 1280x2000
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+# before_capture: 'javascript/disable_javascript--phantom.js'
+# before_capture: 'javascript/cgu-cleanup.js'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  template: 'basic_template' # Examples: 'basic_template' (default), 'slideshow_template'
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first

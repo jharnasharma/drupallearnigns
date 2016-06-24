@@ -1,0 +1,194 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'capture' mode, which is best suited to
+# comparing a test and live version of the same website.
+#
+# `wraith capture capture.yaml`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The directory that your screenshots will be stored in
+directory: 'reports/cgudev_adviser_insights'
+
+
+# (required) The domains to take screenshots of.
+domains:
+  kentico:  "http://syd-lb.cgu.com.au.wwwserver.com.au"
+  drupaldev:      "http://dev.cgu.iagdev.net"
+
+# (required) The paths to capture. All paths should exist for both of the domains specified above.
+paths:
+  "insights": "/For-Advisers/insights"
+  "insights_August-2015-Insights_Collingwood-CGU-See-It-Through-Series": "/For-Advisers/insights/August-2015-Insights/Collingwood-CGU-See-It-Through-Series"
+  "insights_August-2015-Insights_Congratulations-to-our-grand-prize-winner": "/For-Advisers/insights/August-2015-Insights/Congratulations-to-our-grand-prize-winner"
+  "insights_August-2015-Insights_From-Donna-s-Desk": "/For-Advisers/insights/August-2015-Insights/From-Donna-s-Desk"
+  "insights_August-2015-Insights_New-technology-to-help-you-see-it-through": "/For-Advisers/insights/August-2015-Insights/New-technology-to-help-you-see-it-through"
+  "insights_August-2015-Insights_The-2015-winter-crop-season-is-upon-us": "/For-Advisers/insights/August-2015-Insights/The-2015-winter-crop-season-is-upon-us"
+  "insights_August-2015-Insights_uSurvey-app-coming-to-iPhone!": "/For-Advisers/insights/August-2015-Insights/uSurvey-app-coming-to-iPhone!"
+  "insights_December-2014-Insights_added-flexibility-in-cgu-claims-contents-settlemen": "/For-Advisers/insights/December-2014-Insights/added-flexibility-in-cgu-claims-contents-settlemen"
+  "insights_December-2014-Insights_cgu-celebrates-small-business-success": "/For-Advisers/insights/December-2014-Insights/cgu-celebrates-small-business-success"
+  "insights_December-2014-Insights_cgu-nsw-act-recognised-in-the-niba-broker-market-s": "/For-Advisers/insights/December-2014-Insights/cgu-nsw-act-recognised-in-the-niba-broker-market-s"
+  "insights_December-2014-Insights_claims-settlement-guideline-changes": "/For-Advisers/insights/December-2014-Insights/claims-settlement-guideline-changes"
+  "insights_December-2014-Insights_from-donna-s-desk-december": "/For-Advisers/insights/December-2014-Insights/from-donna-s-desk-december"
+  "insights_December-2014-Insights_get-in-early-to-cover-crops-this-season": "/For-Advisers/insights/December-2014-Insights/get-in-early-to-cover-crops-this-season"
+  "insights_December-2014-Insights_our-response-to-the-brisbane-storms": "/For-Advisers/insights/December-2014-Insights/our-response-to-the-brisbane-storms"
+  "insights_December-2015-Insights_CGU-Connect-now-offers-motor-rego-look-up": "/For-Advisers/insights/December-2015-Insights/CGU-Connect-now-offers-motor-rego-look-up"
+  "insights_December-2015-Insights_CGU-Polo-events": "/For-Advisers/insights/December-2015-Insights/CGU-Polo-events"
+  "insights_December-2015-Insights_Donna-s-Desk": "/For-Advisers/insights/December-2015-Insights/Donna-s-Desk"
+  "insights_February-2016-Insights_CGU-saves-Tropfest": "/For-Advisers/insights/February-2016-Insights/CGU-saves-Tropfest"
+  "insights_February-2016-Insights_Community-Coach-Campaign": "/For-Advisers/insights/February-2016-Insights/Community-Coach-Campaign"
+  "insights_February-2016-Insights_Do-you-know-what-the-5-most-common-SME-business-cl": "/For-Advisers/insights/February-2016-Insights/Do-you-know-what-the-5-most-common-SME-business-cl"
+  "insights_February-2016-Insights_Donna-s-Desk": "/For-Advisers/insights/February-2016-Insights/Donna-s-Desk"
+  "insights_February-2016-Insights_Further-improvements-to-CGUs-Claims-Portal": "/For-Advisers/insights/February-2016-Insights/Further-improvements-to-CGU%E2%80%99s-Claims-Portal"
+  "insights_November-2014-Insights_cgu-claims-checklist": "/For-Advisers/insights/November-2014-Insights/cgu-claims-checklist"
+  "insights_November-2014-Insights_cgu-s-channel-experience-survey": "/For-Advisers/insights/November-2014-Insights/cgu-s-channel-experience-survey"
+  "insights_November-2014-Insights_cgu-s-find-an-adviser-tool!": "/For-Advisers/insights/November-2014-Insights/cgu-s-find-an-adviser-tool!"
+  "insights_November-2014-Insights_cgu-senior-appointments": "/For-Advisers/insights/November-2014-Insights/cgu-senior-appointments"
+  "insights_November-2014-Insights_from-donna-s-desk-november": "/For-Advisers/insights/November-2014-Insights/from-donna-s-desk-november"
+  "insights_November-2014-Insights_key-facts-sheets": "/For-Advisers/insights/November-2014-Insights/key-facts-sheets"
+  "insights_November-2014-Insights_make-sure-your-customers-are-aware-of-bushfire-ris": "/For-Advisers/insights/November-2014-Insights/make-sure-your-customers-are-aware-of-bushfire-ris"
+  "insights_November-2015-Insights_CAT-Season-campaign": "/For-Advisers/insights/November-2015-Insights/CAT-Season-campaign"
+  "insights_November-2015-Insights_Claims-portal-coming-to-you-on-Monday-30-Novembe": "/For-Advisers/insights/November-2015-Insights/Claims-portal-%E2%80%93-coming-to-you-on-Monday-30-Novembe"
+  "insights_November-2015-Insights_Donna-s-Desk": "/For-Advisers/insights/November-2015-Insights/Donna-s-Desk"
+  "insights_November-2015-Insights_Fire-risk-management-this-harvesting-season": "/For-Advisers/insights/November-2015-Insights/Fire-risk-management-this-harvesting-season"
+  "insights_October-2014-Insights_are-you-bushfire-ready": "/For-Advisers/insights/October-2014-Insights/are-you-bushfire-ready"
+  "insights_October-2014-Insights_brand-refresh-toolkit-for-our-partners": "/For-Advisers/insights/October-2014-Insights/brand-refresh-toolkit-for-our-partners"
+  "insights_October-2014-Insights_cgus-strata-resilience-project-delivering-insuran": "/For-Advisers/insights/October-2014-Insights/cgu%E2%80%99s-strata-resilience-project-delivering-insuran"
+  "insights_October-2014-Insights_cgu-at-niba": "/For-Advisers/insights/October-2014-Insights/cgu-at-niba"
+  "insights_October-2014-Insights_cgu-s-top-20-apps-for-brokers": "/For-Advisers/insights/October-2014-Insights/cgu-s-top-20-apps-for-brokers"
+  "insights_October-2014-Insights_dane-goninon-talks-about-the-platinum-leadership-n": "/For-Advisers/insights/October-2014-Insights/dane-goninon-talks-about-the-platinum-leadership-n"
+  "insights_October-2014-Insights_from-donna-s-desk-october": "/For-Advisers/insights/October-2014-Insights/from-donna-s-desk-october"
+  "insights_October-2015-Insights_Best-Doctors": "/For-Advisers/insights/October-2015-Insights/Best-Doctors"
+  "insights_October-2015-Insights_CGU-Management-Liability-for-SME-coming-to-CGU-Con": "/For-Advisers/insights/October-2015-Insights/CGU-Management-Liability-for-SME-coming-to-CGU-Con"
+  "insights_October-2015-Insights_CGU-partners-with-new-Equality-event": "/For-Advisers/insights/October-2015-Insights/CGU-partners-with-new-Equality-event"
+  "insights_October-2015-Insights_Commercial-Motor-new-initiatives-and-age-excesses": "/For-Advisers/insights/October-2015-Insights/Commercial-Motor-new-initiatives-and-age-excesses"
+  "insights_October-2015-Insights_Donna-s-Desk": "/For-Advisers/insights/October-2015-Insights/Donna-s-Desk"
+  "insights_October-2015-Insights_Farmers-moving-to-renewable-energy-Solar-energy": "/For-Advisers/insights/October-2015-Insights/Farmers-moving-to-renewable-energy-%E2%80%93-Solar-energy"
+  "insights_October-2015-Insights_Promoting-the-value-of-advice-for-SMEs-via-network": "/For-Advisers/insights/October-2015-Insights/Promoting-the-value-of-advice-for-SMEs-via-network"
+  "insights_October-2015-Insights_Tropical-cyclones-What-the-2015-2016-tropical-cy": "/For-Advisers/insights/October-2015-Insights/Tropical-cyclones-%E2%80%93-What-the-2015-2016-tropical-cy"
+  "insights_September-2014-Insights_cgu-and-xero-announce-partnership": "/For-Advisers/insights/September-2014-Insights/cgu-and-xero-announce-partnership"
+  "insights_September-2014-Insights_cgu-commercial-motor-shifts-gears": "/For-Advisers/insights/September-2014-Insights/cgu-commercial-motor-shifts-gears"
+  "insights_September-2014-Insights_cgu-countrypak": "/For-Advisers/insights/September-2014-Insights/cgu-countrypak"
+  "insights_September-2014-Insights_enhancements-to-letters-of-appointment": "/For-Advisers/insights/September-2014-Insights/enhancements-to-letters-of-appointment"
+  "insights_September-2014-Insights_from-donna-s-desk": "/For-Advisers/insights/September-2014-Insights/from-donna-s-desk"
+  "insights_September-2014-Insights_launch-of-new-cgu-claims-support-app": "/For-Advisers/insights/September-2014-Insights/launch-of-new-cgu-claims-support-app"
+  "insights_September-2014-Insights_platinum-leadership-network-summit": "/For-Advisers/insights/September-2014-Insights/platinum-leadership-network-summit"
+  "insights_September-2014-Insights_young-insurance-professionals-australia-new-zealan": "/For-Advisers/insights/September-2014-Insights/young-insurance-professionals-australia-new-zealan"
+  "insights_September-2015-Insights_Extreme-weather-season-in-review": "/For-Advisers/insights/September-2015-Insights/Extreme-weather-season-in-review"
+  "insights_September-2015-Insights_New-Adviser-Portal-coming-in-October": "/For-Advisers/insights/September-2015-Insights/New-Adviser-Portal-coming-in-October"
+  "insights_September-2015-Insights_uSurvey-capability-expanded-CGU-contacts-at-your-f": "/For-Advisers/insights/September-2015-Insights/uSurvey-capability-expanded-CGU-contacts-at-your-f"
+  "insights_april-2014-insights_financial-system-inquiry-underway": "/For-Advisers/insights/april-2014-insights/financial-system-inquiry-underway"
+  "insights_april-2014-insights_from-ben-s-desk-april": "/For-Advisers/insights/april-2014-insights/from-ben-s-desk-april"
+  "insights_april-2014-insights_future-of-financial-advice-fofa-bill": "/For-Advisers/insights/april-2014-insights/future-of-financial-advice-(fofa)-bill"
+  "insights_april-2014-insights_how-cgu-has-listened-to-your-feedback": "/For-Advisers/insights/april-2014-insights/how-cgu-has-listened-to-your-feedback"
+  "insights_april-2014-insights_meet-max-s-broker-video": "/For-Advisers/insights/april-2014-insights/meet-max-s-broker-(video)"
+  "insights_april-2014-insights_rapid-repair-service": "/For-Advisers/insights/april-2014-insights/rapid-repair-service"
+  "insights_april-2014-insights_sneak-peek-at-our-next-television-ads!-(videos)": "/For-Advisers/insights/april-2014-insights/sneak-peek-at-our-next-television-ads!-(videos)"
+  "insights_december-2015-insights_Changes-to-Duty-of-Disclosure": "/For-Advisers/insights/december-2015-insights/Changes-to-Duty-of-Disclosure"
+  "insights_december-2015-insights_Management-Liability-Quote-and-bind-online-with-im": "/For-Advisers/insights/december-2015-insights/Management-Liability-Quote-and-bind-online-with-im"
+  "insights_december-2015-insights_cgu-helps-tropfest-make-a-comeback": "/For-Advisers/insights/december-2015-insights/cgu-helps-tropfest-make-a-comeback"
+  "insights_february-2015_cgu-kicks-off-a-three-year-partnership-with-the-ns": "/For-Advisers/insights/february-2015/cgu-kicks-off-a-three-year-partnership-with-the-ns"
+  "insights_february-2015_cgu-speaks-to-adam-ashley-cooper": "/For-Advisers/insights/february-2015/cgu-speaks-to-adam-ashley-cooper"
+  "insights_february-2015_from-donna-s-desk": "/For-Advisers/insights/february-2015/from-donna-s-desk"
+  "insights_february-2015_key-fact-sheets-now-available-for-countrypak": "/For-Advisers/insights/february-2015/key-fact-sheets-now-available-for-countrypak"
+  "insights_february-2016-insights": "/For-Advisers/insights/february-2016-insights"
+  "insights_february-2016-insights_Best-Doctors": "/For-Advisers/insights/february-2016-insights/Best-Doctors"
+  "insights_february-2016-insights_Business-interruption-cover-is-it-that-important": "/For-Advisers/insights/february-2016-insights/Business-interruption-cover-%E2%80%93-is-it-that-important"
+  "insights_february-2016-insights_Duty-of-Disclosure-update": "/For-Advisers/insights/february-2016-insights/Duty-of-Disclosure-update"
+  "insights_february-2016-insights_Management-Liability-Webinar": "/For-Advisers/insights/february-2016-insights/Management-Liability-Webinar"
+  "insights_july-insights_ben-s-introduction-july": "/For-Advisers/insights/july-insights/ben-s-introduction-july"
+  "insights_july-insights_cgu-is-helping-drought-affected-farmers": "/For-Advisers/insights/july-insights/cgu-is-helping-drought-affected-farmers"
+  "insights_july-insights_improving-the-way-we-do-business": "/For-Advisers/insights/july-insights/improving-the-way-we-do-business"
+  "insights_july-insights_integration-update": "/For-Advisers/insights/july-insights/integration-update"
+  "insights_july-insights_make-sure-your-rural-customers-have-adequate-cover": "/For-Advisers/insights/july-insights/make-sure-your-rural-customers-have-adequate-cover"
+  "insights_july-insights_winners-of-the-cgu-ubuild-competition-announced": "/For-Advisers/insights/july-insights/winners-of-the-cgu-ubuild-competition-announced"
+  "insights_june-2015-insights_cgu-usurvey-application-captures-broker-interest": "/For-Advisers/insights/june-2015-insights/cgu-usurvey-application-captures-broker-interest"
+  "insights_june-2015-insights_difference-in-conditions-offer": "/For-Advisers/insights/june-2015-insights/difference-in-conditions-offer"
+  "insights_june-2015-insights_farm-customers-increasingly-looking-to-protect-aga": "/For-Advisers/insights/june-2015-insights/farm-customers-increasingly-looking-to-protect-aga"
+  "insights_june-2015-insights_from-donna-s-desk": "/For-Advisers/insights/june-2015-insights/from-donna-s-desk"
+  "insights_june-2015-insights_iag-and-berkshire-hathaway-partnership-update": "/For-Advisers/insights/june-2015-insights/iag-and-berkshire-hathaway-partnership-update"
+  "insights_june-2015-insights_qld-business-update-and-market-day-save-the-dates": "/For-Advisers/insights/june-2015-insights/qld-business-update-and-market-day-save-the-dates"
+  "insights_june-2015-insights_thank-you-for-voting-us-insurer-of-the-year": "/For-Advisers/insights/june-2015-insights/thank-you-for-voting-us-insurer-of-the-year"
+  "insights_june-2015-insights_waratahs-coach-michael-cheika-shares-his-leadershi": "/For-Advisers/insights/june-2015-insights/waratahs-coach-michael-cheika-shares-his-leadershi"
+  "insights_june-2015-insights_what-does-it-take-to-see-it-through": "/For-Advisers/insights/june-2015-insights/what-does-it-take-to-see-it-through"
+  "insights_march-2015-insights_cgus-innovative-strata-program-delivers-customers": "/For-Advisers/insights/march-2015-insights/cgu%E2%80%99s-innovative-strata-program-delivers-customers"
+  "insights_march-2015-insights_from-donna-s-desk": "/For-Advisers/insights/march-2015-insights/from-donna-s-desk"
+  "insights_march-2015-insights_nsw-market-day-highlights-the-value-of-advice": "/For-Advisers/insights/march-2015-insights/nsw-market-day-highlights-the-value-of-advice"
+  "insights_march-2015-insights_setting-the-benchmark-for-risk-management": "/For-Advisers/insights/march-2015-insights/setting-the-benchmark-for-risk-management"
+  "insights_march-2015-insights_women-in-leadership-taking-the-next-step": "/For-Advisers/insights/march-2015-insights/women-in-leadership-%E2%80%93-taking-the-next-step"
+  "insights_may-2015-insights_cgu-and-outgoing-call-recording": "/For-Advisers/insights/may-2015-insights/cgu-and-outgoing-call-recording"
+  "insights_may-2015-insights_emerging-trends-in-defamation-insurance": "/For-Advisers/insights/may-2015-insights/emerging-trends-in-defamation-insurance"
+  "insights_may-2015-insights_farm-risk-surveys-faster-and-easier-with-cgus-u": "/For-Advisers/insights/may-2015-insights/farm-risk-surveys-%E2%80%93-faster-and-easier-with-cgu%E2%80%99s-u"
+  "insights_may-2015-insights_from-donna-s-desk": "/For-Advisers/insights/may-2015-insights/from-donna-s-desk"
+  "insights_may-2015-insights_how-to-optimise-your-search-engine-results": "/For-Advisers/insights/may-2015-insights/how-to-optimise-your-search-engine-results"
+  "insights_may-2015-insights_market-day-and-steadfast-wrap-up": "/For-Advisers/insights/may-2015-insights/market-day-and-steadfast-wrap-up"
+  "insights_may-2015-insights_new-cgu-product-wordings-from-1-july": "/For-Advisers/insights/may-2015-insights/new-cgu-product-wordings-from-1-july"
+  "insights_may-insights_cgu-farm-motor-update": "/For-Advisers/insights/may-insights/cgu-farm-motor-update"
+  "insights_may-insights_cgu-ubuild-build-your-own-adventure-competition": "/For-Advisers/insights/may-insights/cgu-ubuild-build-your-own-adventure-competition"
+  "insights_may-insights_federal-budget-2014-15-how-it-affects-the-insuranc": "/For-Advisers/insights/may-insights/federal-budget-2014-15-how-it-affects-the-insuranc"
+  "insights_may-insights_from-ben-s-desk-may": "/For-Advisers/insights/may-insights/from-ben-s-desk-may"
+  "insights_may-insights_national-commission-of-audit-report": "/For-Advisers/insights/may-insights/national-commission-of-audit-report"
+  "insights_may-insights_new-cover-for-crops-this-cropping-season": "/For-Advisers/insights/may-insights/new-cover-for-crops-this-cropping-season"
+  "insights_may-insights_reducing-referrals-for-liability-occupations-via-c": "/For-Advisers/insights/may-insights/reducing-referrals-for-liability-occupations-via-c"
+  "insights_may-insights_treasury-white-paper-on-insurance-affordability": "/For-Advisers/insights/may-insights/treasury-white-paper-on-insurance-affordability"
+  "insights_may-insights_using-google-alerts": "/For-Advisers/insights/may-insights/using-google-alerts"
+  "insights_november-2015-insights_CGU-Contacts-@-your-fingertips": "/For-Advisers/insights/november-2015-insights/CGU-Contacts-@-your-fingertips"
+  "insights_november-2015-insights_CGU-Polo-events-have-kicked-off": "/For-Advisers/insights/november-2015-insights/CGU-Polo-events-have-kicked-off"
+  "insights_november-2015-insights_CGU-at-the-Melbourne-Cup-Carnival": "/For-Advisers/insights/november-2015-insights/CGU-at-the-Melbourne-Cup-Carnival"
+  "insights_november-2015-insights_Download-uSurvey-today": "/For-Advisers/insights/november-2015-insights/Download-uSurvey-today"
+  "insights_november-2015-insights_Fastest-Growing-Natural-Peril-Risk-in-Australia-Bu": "/For-Advisers/insights/november-2015-insights/Fastest-Growing-Natural-Peril-Risk-in-Australia-Bu"
+  "insights_november-2015-insights_Have-you-seen-the-CGU-Blog": "/For-Advisers/insights/november-2015-insights/Have-you-seen-the-CGU-Blog"
+  "insights_november-2015-insights_IAG-s-new-brand-identity": "/For-Advisers/insights/november-2015-insights/IAG-s-new-brand-identity"
+  "insights_november-2015-insights_Management-Liability-online-with-an-improved-wordi": "/For-Advisers/insights/november-2015-insights/Management-Liability-online-with-an-improved-wordi"
+  "insights_november-2015-insights_Partner-experience-survey-have-your-say": "/For-Advisers/insights/november-2015-insights/Partner-experience-survey-have-your-say"
+  "insights_september-2015-insights_2015-NIBA-Convention": "/For-Advisers/insights/september-2015-insights/2015-NIBA-Convention"
+  "insights_september-2015-insights_From-Donna-s-Desk": "/For-Advisers/insights/september-2015-insights/From-Donna-s-Desk"
+  "insights_september-2015-insights_Proud-and-honoured-to-have-been-voted-NIBA-General": "/For-Advisers/insights/september-2015-insights/Proud-and-honoured-to-have-been-voted-NIBA-General"
+  "insights_september-2015-insights_Welcome-to-Learning": "/For-Advisers/insights/september-2015-insights/Welcome-to-Learning"
+  "insights_August-2015-Insights_uSurvey-app-coming-to-iPhone!": "/for-advisers/insights/August-2015-Insights/uSurvey-app-coming-to-iPhone!"
+  "insights_2016_april_insights_Introducing_CGU_Cyber_Defence": "/For-Advisers/insights/2016-April-Insights/Introducing-CGU-Cyber-Defence"
+  "insights_2016_april_insights_Cyber_Cover_Extension_now_available": "/For-Advisers/insights/2016-april-insights/Cyber-Cover-Extension-now-available"
+  "insights_2016_april_insights_lumley_phone_numbers_will_be_decommissioned_from_a": "/For-Advisers/insights/2016-april-insights/lumley-phone-numbers-will-be-decommissioned-from-a"
+  "insights_2016_april_insights_business_interruption_webinar_series": "/For-Advisers/insights/2016-april-insights/business-interruption-webinar-series"
+  "insights_2016_april_insights_partner_experience_survey_have_your_say": "/For-Advisers/insights/2016-april-insights/partner-experience-survey,-have-your-say"
+  "insights_2016_april_insights_From_Donnas_Desk": "/For-Advisers/insights/2016-april-insights/From-Donna-s-Desk"
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+  - 320x1500
+#  - 600x768
+#  - 768
+#  - 1024
+  - 1280x2000
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+# before_capture: 'javascript/disable_javascript--phantom.js'
+# before_capture: 'javascript/cgu-cleanup.js'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  template: 'basic_template' # Examples: 'basic_template' (default), 'slideshow_template'
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first

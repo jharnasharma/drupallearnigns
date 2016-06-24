@@ -1,0 +1,213 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'capture' mode, which is best suited to
+# comparing a test and live version of the same website.
+#
+# `wraith capture capture.yaml`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The directory that your screenshots will be stored in
+directory: 'reports/cgudev_business_workers_compensation'
+
+
+# (required) The domains to take screenshots of.
+domains:
+  kentico:  "http://syd-lb.cgu.com.au.wwwserver.com.au"
+  drupaldev:      "http://iagcgudev3.prod.acquia-sites.com"
+
+# (required) The paths to capture. All paths should exist for both of the domains specified above.
+paths:
+  "Claims-for-Employers-0": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers"
+  "Choice-of-Treatment-Provider-1": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-2": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers/Compensation-Payments"
+  "Determining-Liability-3": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers/Determining-Liability"
+  "Managing-Injuries-4": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers/Managing-Injuries"
+  "Reporting-an-Injury-5": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers/Reporting-an-Injury"
+  "Your-Obligations-6": "/Business/Workers-Compensation/ACT/For-Employers/Claims-for-Employers/Your-Obligations"
+  "OH-S-Risk-Management-Training-7": "/Business/Workers-Compensation/ACT/For-Employers/OH-S-Risk-Management-Training"
+  "Online-Training-8": "/Business/Workers-Compensation/ACT/For-Employers/OH-S-Risk-Management-Training/Online-Training"
+  "Risk-Management-9": "/Business/Workers-Compensation/ACT/For-Employers/OH-S-Risk-Management-Training/Risk-Management"
+  "Services-and-Consulting-10": "/Business/Workers-Compensation/ACT/For-Employers/OH-S-Risk-Management-Training/Services-and-Consulting"
+  "Claims-Management-11": "/Business/Workers-Compensation/ACT/For-Employers/Tools-and-Resources-for-Employers/Claims-Management"
+  "Employer-Toolkit-12": "/Business/Workers-Compensation/ACT/For-Employers/Tools-and-Resources-for-Employers/Employer-Toolkit"
+  "Forms-Downloads-for-Employers-13": "/Business/Workers-Compensation/ACT/For-Employers/Tools-and-Resources-for-Employers/Forms-Downloads-for-Employers"
+  "Performance-Reporting-14": "/Business/Workers-Compensation/ACT/For-Employers/Tools-and-Resources-for-Employers/Performance-Reporting"
+  "Self-Insurance-15": "/Business/Workers-Compensation/ACT/For-Employers/Tools-and-Resources-for-Employers/Self-Insurance"
+  "Your-Policy-16": "/Business/Workers-Compensation/ACT/For-Employers/Tools-and-Resources-for-Employers/Your-Policy"
+  "Contact-Workers-Compensation-17": "/Business/Workers-Compensation/ACT/For-Injured-Workers/Contact-Workers-Compensation"
+  "Customer-Feedback-18": "/Business/Workers-Compensation/ACT/For-Injured-Workers/Customer-Feedback"
+  "Forms-Downloads-for-Injured-Workers-19": "/Business/Workers-Compensation/ACT/For-Injured-Workers/Forms-Downloads-for-Injured-Workers"
+  "Choice-of-Treatment-Provider-20": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-21": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Compensation-Payments"
+  "Determining-Liability-22": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Determining-Liability"
+  "Dispute-Resolution-23": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Dispute-Resolution"
+  "Managing-Injuries-24": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Managing-Injuries"
+  "Reporting-an-Injury-25": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Reporting-an-Injury"
+  "Your-Obligations-26": "/Business/Workers-Compensation/NSW/For-Employers/Claims-for-Employers/Your-Obligations"
+  "Face-to-Face-Training-(Course-List)-27": "/Business/Workers-Compensation/NSW/For-Employers/OH-S-Risk-Management-Training/Face-to-Face-Training-(Course-List)"
+  "Online-Training-28": "/Business/Workers-Compensation/NSW/For-Employers/OH-S-Risk-Management-Training/Online-Training"
+  "Risk-Management-29": "/Business/Workers-Compensation/NSW/For-Employers/OH-S-Risk-Management-Training/Risk-Management"
+  "Services-and-Consulting-30": "/Business/Workers-Compensation/NSW/For-Employers/OH-S-Risk-Management-Training/Services-and-Consulting"
+  "Claims-Management-31": "/Business/Workers-Compensation/NSW/For-Employers/Tools-and-Resources-for-Employers/Claims-Management"
+  "Forms-Downloads-for-Employers-32": "/Business/Workers-Compensation/NSW/For-Employers/Tools-and-Resources-for-Employers/Forms-Downloads-for-Employers"
+  "Performance-Reporting-33": "/Business/Workers-Compensation/NSW/For-Employers/Tools-and-Resources-for-Employers/Performance-Reporting"
+  "Self-Insurance-34": "/Business/Workers-Compensation/NSW/For-Employers/Tools-and-Resources-for-Employers/Self-Insurance"
+  "Your-Policy-35": "/Business/Workers-Compensation/NSW/For-Employers/Tools-and-Resources-for-Employers/Your-Policy"
+  "Changes-to-NSW-Legislation-36": "/Business/Workers-Compensation/NSW/For-Injured-Workers/Changes-to-NSW-Legislation"
+  "Contact-Workers-Compensation-37": "/Business/Workers-Compensation/NSW/For-Injured-Workers/Contact-Workers-Compensation"
+  "Customer-Feedback-38": "/Business/Workers-Compensation/NSW/For-Injured-Workers/Customer-Feedback"
+  "Forms-Downloads-for-Employees-39": "/Business/Workers-Compensation/NSW/For-Injured-Workers/Forms-Downloads-for-Employees"
+  "Choice-of-Treatment-Provider-40": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-41": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Compensation-Payments"
+  "Determining-Liability-42": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Determining-Liability"
+  "Dispute-Resolution-43": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Dispute-Resolution"
+  "Managing-Injuries-44": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Managing-Injuries"
+  "Reporting-an-Injury-45": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Reporting-an-Injury"
+  "Understanding-Your-Obligations-46": "/Business/Workers-Compensation/NT/For-Employers/Claims-for-Employers/Understanding-Your-Obligations"
+  "Online-Training-47": "/Business/Workers-Compensation/NT/For-Employers/OH-S-Risk-Management-Training/Online-Training"
+  "Risk-Management-48": "/Business/Workers-Compensation/NT/For-Employers/OH-S-Risk-Management-Training/Risk-Management"
+  "Services-and-Consulting-49": "/Business/Workers-Compensation/NT/For-Employers/OH-S-Risk-Management-Training/Services-and-Consulting"
+  "Claims-Management-50": "/Business/Workers-Compensation/NT/For-Employers/Tools-and-Resources-for-Employers/Claims-Management"
+  "Employer-Toolkit-51": "/Business/Workers-Compensation/NT/For-Employers/Tools-and-Resources-for-Employers/Employer-Toolkit"
+  "Forms-Downloads-for-Employers-52": "/Business/Workers-Compensation/NT/For-Employers/Tools-and-Resources-for-Employers/Forms-Downloads-for-Employers"
+  "Performance-Reporting-53": "/Business/Workers-Compensation/NT/For-Employers/Tools-and-Resources-for-Employers/Performance-Reporting"
+  "Self-Insurance-54": "/Business/Workers-Compensation/NT/For-Employers/Tools-and-Resources-for-Employers/Self-Insurance"
+  "Your-Policy-55": "/Business/Workers-Compensation/NT/For-Employers/Tools-and-Resources-for-Employers/Your-Policy"
+  "Claims-Information-For-Injured-Workers-56": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers"
+  "Choice-of-Treatment-Provider-57": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-58": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Compensation-Payments"
+  "Determining-Liability-59": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Determining-Liability"
+  "Dispute-Resolution-60": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Dispute-Resolution"
+  "Managing-Injuries-61": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Managing-Injuries"
+  "Reporting-an-Injury-62": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Reporting-an-Injury"
+  "Your-Obligations-63": "/Business/Workers-Compensation/NT/For-Injured-Workers/Claims-Information-For-Injured-Workers/Your-Obligations"
+  "Contact-Workers-Compensation-64": "/Business/Workers-Compensation/NT/For-Injured-Workers/Contact-Workers-Compensation"
+  "Customer-Feedback-65": "/Business/Workers-Compensation/NT/For-Injured-Workers/Customer-Feedback"
+  "Forms-Downloads-for-Employees-66": "/Business/Workers-Compensation/NT/For-Injured-Workers/Forms-Downloads-for-Employees"
+  "Choice-of-Treatment-Provider-67": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-68": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Compensation-Payments"
+  "Determining-Liability-69": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Determining-Liability"
+  "Dispute-Resolution-70": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Dispute-Resolution"
+  "Managing-Injuries-71": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Managing-Injuries"
+  "Reporting-an-Injury-72": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Reporting-an-Injury"
+  "Understanding-Your-Obligations-73": "/Business/Workers-Compensation/TAS/For-Employers/Claims-for-Employers/Understanding-Your-Obligations"
+  "Online-Training-74": "/Business/Workers-Compensation/TAS/For-Employers/OH-S-Risk-Management-Training/Online-Training"
+  "Risk-Management-75": "/Business/Workers-Compensation/TAS/For-Employers/OH-S-Risk-Management-Training/Risk-Management"
+  "Services-and-Consulting-76": "/Business/Workers-Compensation/TAS/For-Employers/OH-S-Risk-Management-Training/Services-and-Consulting"
+  "Claims-Management-77": "/Business/Workers-Compensation/TAS/For-Employers/Tools-and-Resources-for-Employers/Claims-Management"
+  "Employer-Toolkit-78": "/Business/Workers-Compensation/TAS/For-Employers/Tools-and-Resources-for-Employers/Employer-Toolkit"
+  "Forms-Downloads-for-Employers-79": "/Business/Workers-Compensation/TAS/For-Employers/Tools-and-Resources-for-Employers/Forms-Downloads-for-Employers"
+  "Performance-Reporting-80": "/Business/Workers-Compensation/TAS/For-Employers/Tools-and-Resources-for-Employers/Performance-Reporting"
+  "Self-Insurance-81": "/Business/Workers-Compensation/TAS/For-Employers/Tools-and-Resources-for-Employers/Self-Insurance"
+  "Your-Policy-82": "/Business/Workers-Compensation/TAS/For-Employers/Tools-and-Resources-for-Employers/Your-Policy"
+  "Claims-Information-For-Injured-Workers-83": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers"
+  "Choice-of-Treatment-Provider-84": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-85": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Compensation-Payments"
+  "Determining-Liability-86": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Determining-Liability"
+  "Dispute-Resolution-87": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Dispute-Resolution"
+  "Managing-Injuries-88": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Managing-Injuries"
+  "Reporting-an-Injury-89": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Reporting-an-Injury"
+  "Understanding-your-Obligations-90": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Claims-Information-For-Injured-Workers/Understanding-your-Obligations"
+  "Contact-Workers-Compensation-91": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Contact-Workers-Compensation"
+  "Customer-Feedback-92": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Customer-Feedback"
+  "Forms-Downloads-for-Employees-93": "/Business/Workers-Compensation/TAS/For-Injured-Workers/Forms-Downloads-for-Employees"
+  "Choice-of-Treatment-Provider-94": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-95": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Compensation-Payments"
+  "Determining-Liability-96": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Determining-Liability"
+  "Dispute-Resolution-97": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Dispute-Resolution"
+  "Managing-Injuries-98": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Managing-Injuries"
+  "Reporting-an-Injury-99": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Reporting-an-Injury"
+  "Understanding-Your-Obligations-100": "/Business/Workers-Compensation/VIC/For-Employers/Claims-for-Employers/Understanding-Your-Obligations"
+  "Face-to-Face-Training-(Course-List)-101": "/Business/Workers-Compensation/VIC/For-Employers/OH-S-Risk-Management-Training/Face-to-Face-Training-(Course-List)"
+  "Online-Training-102": "/Business/Workers-Compensation/VIC/For-Employers/OH-S-Risk-Management-Training/Online-Training"
+  "Risk-Management-103": "/Business/Workers-Compensation/VIC/For-Employers/OH-S-Risk-Management-Training/Risk-Management"
+  "Services-and-Consulting-104": "/Business/Workers-Compensation/VIC/For-Employers/OH-S-Risk-Management-Training/Services-and-Consulting"
+  "Claims-Management-105": "/Business/Workers-Compensation/VIC/For-Employers/Tools-and-Resources/Claims-Management"
+  "Employer-Toolkit-106": "/Business/Workers-Compensation/VIC/For-Employers/Tools-and-Resources/Employer-Toolkit"
+  "Forms-Downloads-for-Employers-107": "/Business/Workers-Compensation/VIC/For-Employers/Tools-and-Resources/Forms-Downloads-for-Employers"
+  "Performance-Reporting-108": "/Business/Workers-Compensation/VIC/For-Employers/Tools-and-Resources/Performance-Reporting"
+  "Self-Insurance-109": "/Business/Workers-Compensation/VIC/For-Employers/Tools-and-Resources/Self-Insurance"
+  "Your-Policy-110": "/Business/Workers-Compensation/VIC/For-Employers/Tools-and-Resources/Your-Policy"
+  "Claims-Information-For-Injured-Workers-111": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers"
+  "Choice-of-Treatment-Provider-112": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-113": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Compensation-Payments"
+  "Determining-Liability-114": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Determining-Liability"
+  "Dispute-Resolution-115": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Dispute-Resolution"
+  "Managing-Injuries-116": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Managing-Injuries"
+  "Reporting-an-Injury-117": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Reporting-an-Injury"
+  "Your-Obligations-118": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Claims-Information-For-Injured-Workers/Your-Obligations"
+  "Contact-Workers-Compensation-119": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Contact-Workers-Compensation"
+  "Customer-Feedback-120": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Customer-Feedback"
+  "Forms-Downloads-for-Employees-121": "/Business/Workers-Compensation/VIC/For-Injured-Workers/Forms-Downloads-for-Employees"
+  "Claims-for-Employers-122": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers"
+  "Choice-of-Treatment-Provider-123": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-124": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Compensation-Payments"
+  "Determining-Liability-125": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Determining-Liability"
+  "Dispute-Resolution-126": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Dispute-Resolution"
+  "Managing-Injuries-127": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Managing-Injuries"
+  "Privacy-consent-authority-128": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Privacy-consent-authority"
+  "Reporting-an-Injury-129": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Reporting-an-Injury"
+  "Understanding-Your-Obligations-130": "/Business/Workers-Compensation/WA/For-Employers/Claims-for-Employers/Understanding-Your-Obligations"
+  "OH-S-Risk-Management-Training-131": "/Business/Workers-Compensation/WA/For-Employers/OH-S-Risk-Management-Training"
+  "Face-to-Face-Training-(Course-List)-132": "/Business/Workers-Compensation/WA/For-Employers/OH-S-Risk-Management-Training/Face-to-Face-Training-(Course-List)"
+  "Online-Training-133": "/Business/Workers-Compensation/WA/For-Employers/OH-S-Risk-Management-Training/Online-Training"
+  "Services-and-Consulting-134": "/Business/Workers-Compensation/WA/For-Employers/OH-S-Risk-Management-Training/Services-and-Consulting"
+  "Tools-and-Resources-for-Employers-135": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers"
+  "Claims-Management-136": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers/Claims-Management"
+  "Employer-Toolkit-137": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers/Employer-Toolkit"
+  "Forms-Downloads-for-Employers-138": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers/Forms-Downloads-for-Employers"
+  "Performance-Reporting-139": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers/Performance-Reporting"
+  "Self-Insurance-140": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers/Self-Insurance"
+  "Your-Policy-141": "/Business/Workers-Compensation/WA/For-Employers/Tools-and-Resources-for-Employers/Your-Policy"
+  "Claims-Information-For-Injured-Workers-142": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers"
+  "Choice-of-Treatment-Provider-143": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Choice-of-Treatment-Provider"
+  "Compensation-Payments-144": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Compensation-Payments"
+  "Determining-Liability-145": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Determining-Liability"
+  "Dispute-Resolution-146": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Dispute-Resolution"
+  "Managing-Injuries-147": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Managing-Injuries"
+  "Reporting-an-Injury-148": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Reporting-an-Injury"
+  "Understanding-your-Obligations-149": "/Business/Workers-Compensation/WA/For-Injured-Workers/Claims-Information-For-Injured-Workers/Understanding-your-Obligations"
+  "Contact-Workers-Compensation-150": "/Business/Workers-Compensation/WA/For-Injured-Workers/Contact-Workers-Compensation"
+  "Customer-Feedback-151": "/Business/Workers-Compensation/WA/For-Injured-Workers/Customer-Feedback"
+  "Forms-Downloads-for-Employees-152": "/Business/Workers-Compensation/WA/For-Injured-Workers/Forms-Downloads-for-Employees"
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+#  - 320x1500
+#  - 600x768
+#  - 768
+#  - 1024
+  - 1280x2000
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+# before_capture: 'javascript/disable_javascript--phantom.js'
+# before_capture: 'javascript/cgu-cleanup.js'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  template: 'basic_template' # Examples: 'basic_template' (default), 'slideshow_template'
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first

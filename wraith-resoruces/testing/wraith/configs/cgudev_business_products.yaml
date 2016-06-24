@@ -1,0 +1,125 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'capture' mode, which is best suited to
+# comparing a test and live version of the same website.
+#
+# `wraith capture capture.yaml`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The directory that your screenshots will be stored in
+directory: 'reports/cgudev_business_products'
+
+
+# (required) The domains to take screenshots of.
+domains:
+  kentico:  "http://syd-lb.cgu.com.au.wwwserver.com.au"
+  drupaldev:      "http://iagcgudev3.prod.acquia-sites.com"
+
+# (required) The paths to capture. All paths should exist for both of the domains specified above.
+paths:
+  "Products" : "/business/Products"
+  "manage-policy" : "/business/Products/manage-policy"
+  "faqs" : "/business/Products/manage-policy/faqs"
+  "business-pack" : "/business/Products/business-pack"
+  "Directors-and-officers-liability" : "/business/Products/Directors-and-officers-liability"
+  "body-corporate-and-office-bearers-liability" : "/business/Products/Directors-and-officers-liability/body-corporate-and-office-bearers-liability"
+  "corporate-advantage-management-liability" : "/business/Products/Directors-and-officers-liability/corporate-advantage-management-liability"
+  "Superannuation-trustees-liability" : "/business/Products/Directors-and-officers-liability/Superannuation-trustees-liability"
+  "associations-and-not-for-profit-liability" : "/business/Products/Directors-and-officers-liability/associations-and-not-for-profit-liability"
+  "employment-practices-liability" : "/business/Products/Directors-and-officers-liability/employment-practices-liability"
+  "Management-Liability" : "/business/Products/Management-Liability"
+  "Business-Protection-Management-Liability" : "/business/products/Management-Liability/Business-Protection-Management-Liability"
+  "mid-market-management-liability" : "/business/Products/Management-Liability/mid-market-management-liability"
+  "CGU-Cyber-Defence" : /Business/Products/CGU-Cyber-Defence"
+  "Farm-pack" : /Business/products/Farm-pack"
+  "office-pack" : "/business/Products/office-pack"
+  "motor-trades-pack" : "/business/Products/motor-trades-pack"
+  "Professional-Indemnity-Insurance" : "/business/Products/Professional-Indemnity-Insurance"
+  "medical-indemnity" : "/business/Products/Professional-Indemnity-Insurance/medical-indemnity"
+  "Multimedia-liability" : "/business/Products/Professional-Indemnity-Insurance/Multimedia-liability"
+  "workers-compensation" : "/business/Products/workers-compensation"
+  "Commercial-motor" : /Business/products/Commercial-motor"
+  "commercial-property" : "/business/Products/commercial-property"
+  "Public-Liability-Insurance" : /Business/Products/Public-Liability-Insurance"
+  "Market-Stall-Insurance" : "/business/Products/Public-Liability-Insurance/Market-Stall-Insurance"
+  "Professional-indemnity-Broadform-Liability" : "/business/products/Public-Liability-Insurance/Professional-indemnity-Broadform-Liability"
+  "ICT-liability" : "/business/products/Public-Liability-Insurance/ICT-liability"
+  "Commercial-strata" : "/business/Products/Commercial-strata"
+  "farm-rural" : /Business/products/farm-rural"
+  "best-doctors-membership" : /Business/products/farm-rural/best-doctors-membership"
+  "Farm-motor-insurance" : /Business/products/farm-rural/Farm-motor-insurance"
+  "Livestock-insurance" : /Business/products/farm-rural/Livestock-insurance"
+  "Crop-insurance" : /Business/products/farm-rural/Crop-insurance"
+  "construction" : "/business/Products/construction"
+  "corporate-travel" : "/business/Products/corporate-travel"
+  "income-protection" : "/business/Products/income-protection"
+  "industrial-specialised-risks" : "/business/Products/industrial-specialised-risks"
+  "machinery" : "/business/Products/machinery"
+  "marine-(cargo-commercial-hull)" : "/business/Products/marine-(cargo-commercial-hull)"
+  "marine-(cargo-commercial)" : "/business/Products/marine-(cargo-commercial-hull)/marine-(cargo-commercial)"
+  "Commercial-hull-insurance" : "/business/Products/marine-(cargo-commercial-hull)/Commercial-hull-insurance"
+  "marine-goods-in-transit" : "/business/Products/marine-(cargo-commercial-hull)/marine-goods-in-transit"
+  "motor-fleet" : "/business/Products/motor-fleet"
+  "personal-accident" : "/business/Products/personal-accident"
+  "Making-claim" : "/Business/claims/Making-a-claim"
+  "Managed-repairs" : "/Business/claims/CGU-managed-repairers"
+  "Claims-forms" : "/Business/claims/Claims-forms"
+  "claims-faq" : "/Business/claims/claims-faq"
+  "Liability-and-professional-risks-claims" : "/Business/claims/Liability-and-professional-risks-claims"
+  "workers-compensation-claims" : "/Business/claims/workers-compensation-claims"
+  "claims" : "/Business/claims"
+  "claims-app" : "/Business/claims/claims-app"
+  "why-use-an-insurance-adviser" : "/Business/Explore-Business/why-use-an-insurance-adviser"
+  "understanding-workers-compensation" : "/Business/Explore-Business/understanding-workers-compensation"
+  "manufacturing-businesses" : "/Business/Explore-Business/manufacturing-businesses"
+  "health-and-services" : "/Business/Explore-Business/health-and-services"
+  "retail-businesses" : "/Business/Explore-Business/retail-businesses"
+  "insuring-for-business-interruptions" : "/Business/Explore-Business/insuring-for-business-interruptions"
+  "why-insure-your-business-with-cgu" : "/Business/Explore-Business/why-insure-your-business-with-cgu"
+  "Explore-Business" : "/Business/Explore-Business"
+  "construction-businesses" : "/Business/Explore-Business/construction-businesses"
+  "v" : "/Business/Explore-Business/avoiding-underinsurance"
+  "professional-services" : "/Business/Explore-Business/professional-services"
+  "understanding-liability-and-indemnity" : "/Business/Explore-Business/understanding-liability-and-indemnity"
+  "transport-businesses" : "/Business/Explore-Business/transport-businesses"
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+#  - 320x1500
+#  - 600x768
+#  - 768
+#  - 1024
+  - 1280x2000
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+# before_capture: 'javascript/disable_javascript--phantom.js'
+# before_capture: 'javascript/cgu-cleanup.js'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  template: 'basic_template' # Examples: 'basic_template' (default), 'slideshow_template'
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first
