@@ -1,0 +1,35 @@
+<?php
+
+function example_update_7103 () {
+  $schema = array();
+  $schema['example_order'] = array(
+     // table definition array goes here
+    'description' => t('The base table for order.'),
+    'fields' => array(
+      'order_id' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+      'first_name'  => array('type' => 'varchar','length' => 50,'not null' => TRUE,'default' => ''),
+      'age' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+      'price' => array('type' => 'float', 'not null' => TRUE, 'default' => 0),
+      ),
+   'primary key' => array('order_id'),
+  );
+  $schema['example_order_travellers'] = array(
+     // table definition array goes here
+    'description' => t('The base table for order travellers.'),
+        'fields' => array(
+        'trveller_id' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+        'order_id' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE,'default' => 0),
+        'title'  => array('type' => 'varchar','length' => 50,'not null' => TRUE,'default' => ''),
+        'first_name'  => array('type' => 'varchar','length' => 50,'not null' => TRUE,'default' => ''),
+        'last_name'  => array('type' => 'varchar','length' => 50,'not null' => TRUE,'default' => ''),
+        'age' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+        'dob' => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+        'type'  => array('type' => 'varchar','length' => 50,'not null' => TRUE,'default' => ''),
+        'room'  => array('type' => 'varchar','length' => 50,'not null' => TRUE,'default' => ''),
+        ),
+      'primary key' => array('trveller_id'),
+
+  );
+  db_create_table('example_order', $schema['example_order']);
+  db_create_table('example_order_travellers', $schema['example_order_travellers']);
+}

@@ -1,0 +1,7 @@
+name = Example Module
+description = This module provides the skeleton for a custom Views field handler
+core = 7.x
+version = 7.x-1.0
+dependencies[] = views
+files[] = views/example_handler_custom_field.inc
+files[] = views/example_handler_filter_field_sort.inc
