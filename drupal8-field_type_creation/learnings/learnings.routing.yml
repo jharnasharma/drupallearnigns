@@ -1,0 +1,7 @@
+learnings.drupal.form:
+  path: 'admin/config/learnings'
+  defaults:
+    _title: 'Drupal Learning'
+    _form: '\Drupal\learnings\Form\DrupalLearnings'
+  requirements:
+    _permission: 'access content'
